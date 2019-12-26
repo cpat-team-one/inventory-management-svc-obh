@@ -26,8 +26,8 @@ public class StockItemControllerTest {
     @BeforeEach
     public void setup() {
         service = mock(StockItemApi.class);
-        
-        controller = spy(new StockItemController());
+
+        controller = spy(new StockItemController(service));
 
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }
